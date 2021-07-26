@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Web Animation Editor - Easy Web Animation Editor by CSS</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="description" content="Easy Web Animation Editor by CSS">
+		<meta name="keywords" content="animation, web animation, animation editor, web animation editor">
+		<meta name="author" content="Hyper Lab Inc.">
+		<link rel="stylesheet" href="script/style.css">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	</head>
+	<body>
+		<header><h1>Web Aniamtion Editor<sub>By Hyper Lab Inc.</sub></h1><sup>Make Web Animation Easily. Only needs CSS.</sup>
+		<nav>
+		</nav>
+		</header>
+		<hr>
+		<main>
+			<h2>Basic Animation Informations</h2>
+			<section>
+				<article>
+					<form>
+						<ul>
+							<li>
+								<label>Animation Name <input id="aniname" type="text" size="15" placeholder="Animation Name"></label> <button onclick="aninamedefault();" type="button" id="namebutton">Default</button>
+							</li>
+							<li>
+								<label>Animation Duration(second) <input id="anidur" type="text" size="10" placeholder="Only Number"></label>	<button onclick="anidurdefault();" type="button" id="durbutton">Default</button>
+							</li>
+							<li>
+								<label>Animation Repeat <input id="anirep" type="text" size="10" placeholder="Only Number"></label>	<button onclick="anirepdefault();" type="button" id="repbutton">Default</button> <label onclick="repinfinite();" id="checklabel">Infinite <input type="checkbox" id="infinite"></label>
+							</li>
+							<li>
+								<label>Selector <input id="anisel" type="text" size="10"></label>
+							</li>
+							<li>
+								<label>Animation Timing Function <select id="timselect" onchange="selectvalue(this)">
+									<option>linear</option>
+									<option>ease</option>
+									<option>ease-in</option>
+									<option>ease-out</option>
+									<option>ease-in-out</option>
+									<option>cubic-bezier</option>
+								</select></label> <span id="bezier"><p>Bezier Value</p> <input id="bezier1" size="5"><input id="bezier2" size="5"><input id="bezier3" size="5"><input id="bezier4" size="5"></span>
+							</li>
+							<li>
+								<label onclick="anialt()">Alternate Direction<input id="anialt" type="checkbox"></label>
+							</li>
+						</ul>
+					</form>
+				</article>
+				<hr>
+				<article>
+					<h2>KeyFrames & CSS Editor</h2>
+					<h3 style="display:none;">KeyFrames</h3>
+						<label style="display:none;">Keyframe Percantage(%)<input  style="display:none;" size="5" oninput="checktime()" id="endtime"><small style="color:red; display:none;" id="warning">Percantage must be or smaller than 100.</small></label>
+					<h3>CSS</h3>
+					<input placeholder="Include Keyframe and CSS Source code" id="css" size="30"></input>
+				</article>
+				<button onclick="sourcecode()">Convert to CSS</button>
+				<hr>
+				<article>
+					<h2>Result</h2>
+					<textarea readonly id="result" style="width:300px; height:100px;"></textarea><br>
+					<button type="button" onclick="copy()">Copy Source Code</button>
+				</article>
+			</section>
+			<hr>
+		</main>
+		<footer style="background:gray; text-align:center; margin:0; padding:10px; 20px;">
+			<p>Hyper Lab Inc. All Rights Reserved.</p>
+			<address><a style="color:blue; text-decoration:underline;" href="mailto:lucas7234119@hotmail.com">lucas7234119@hotmail.com</address>
+		</footer>
+		<script src="script/script.js"></script>
+	</body>
+</html>
