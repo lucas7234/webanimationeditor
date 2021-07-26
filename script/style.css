@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
-*{font-family:"Nanum Gothic", "맑은 고딕", sans-serif, serif, 돋움, 굴림; line-height:1.2; color:black !important;}
+*{font-family:"Nanum Gothic", "맑은 고딕", sans-serif, serif, 돋움, 굴림; line-height:1.2; }
 
 body{background-color:#aaa;}
 
@@ -17,7 +17,7 @@ a{text-decoration:none; color:white;}
 input, select, option{color:black;}
 option{font:menu;}
 
-select, option{background:#222;}
+
 
 body{text-align:center; margin:0 auto;}
 article{margin:30px; padding:10px;}
