@@ -164,5 +164,5 @@ function copy(){
 	var textarearesult=document.querySelector("#result");
 	textarearesult.select();
 	document.execCommand('copy')
-	alert("Copied!")
+	alert("복사 완료")
 }
